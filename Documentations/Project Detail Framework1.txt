@@ -1,0 +1,48 @@
+Act as an experienced QA Automation Lead and create a complete, production-ready Web
+Automation Framework using Java, Selenium WebDriver, TestNG, Maven, and Extent
+Reports (HTML reporting).
+✅ Requirements:
+1. Use proper Maven project structure:
+src/main/java
+src/test/java
+src/test/resources
+2. Include a fully working pom.xml with dependencies for:
+Selenium Java
+TestNG
+WebDriverManager
+ExtentReports
+SLF4J (for cleaner logs)
+3. Implement the following classes with clear, modular code:
+BaseTest.java → Setup and teardown of WebDriver, Extent Reports initialization,
+and helper logging methods (logInfo, logPass, logFail).
+ExtentManager.java → Configures and manages ExtentReports instance.
+ExtentTestListener.java → Implements TestNG ITestListener for reporting
+test events.
+LoginPage.java → Page Object Model (POM) for login elements and actions.
+HomePage.java → Represents the landing page after successful login.
+ConfigReader.java → Loads data from config.properties.
+LoginTest.java → A sample test validating the login flow for https://opensourcedemo.orangehrmlive.com/web/index.php/auth/login.
+4. Add a config.properties file with parameters like:
+base.url=https://opensourcedemo.orangehrmlive.com/web/index.php/auth/login
+username=Admin
+password=admin123
+browser=chrome
+report.path=reports
+5. Create a working testng.xml that executes the login test.
+6. Integrate Extent Reports to generate a beautiful HTML report after every execution
+(ensure ExtentTest is never null — fix listener linkage).
+7. Implement a Page Object Model (POM) pattern (each page should have its own class).
+8. Include screenshots on failure in the Extent Report.
+9. Make sure the framework runs from command line using:
+mvn clean test
+10. Provide clear comments in all classes for easy understanding by beginners.
+🎯 Expected Output:
+Full Maven folder structure
+All Java class codes
+pom.xml
+config.properties
+testng.xml
+Example HTML report output path
+Instructions on how to execute tests and view results
+The final output must be fully runnable in Eclipse or IntelliJ without any manual fixes.
+

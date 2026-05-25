@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>SeleniumTestNG_OrangeHRM</groupId>
+	<artifactId>SeleniumTestNG</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>SeleniumTestNG</name>
+
+	<!-- Project Website -->
+	<url>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login/</url>
+
+	<!-- ===================== -->
+	<!-- Maven Properties -->
+	<!-- ===================== -->
+
+	<properties>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- ✅ Java Version -->
+		<maven.compiler.release>21</maven.compiler.release>
+
+		<!-- ===================== -->
+		<!-- Dependency Versions -->
+		<!-- ===================== -->
+
+		<selenium.version>4.41.0</selenium.version>
+
+		<poi.version>5.4.1</poi.version>
+
+		<commons.lang3.version>3.18.0</commons.lang3.version>
+		<commons.io.version>2.20.0</commons.io.version>
+
+		<gson.version>2.11.0</gson.version>
+
+		<testng.version>7.10.2</testng.version>
+
+		<log4j.version>2.24.1</log4j.version>
+		<slf4j.version>2.0.12</slf4j.version>
+
+		<extent.reports.version>5.1.1</extent.reports.version>
+
+		<jakarta.mail.version>2.0.2</jakarta.mail.version>
+
+	</properties>
+
+	<!-- ===================== -->
+	<!-- Dependencies -->
+	<!-- ===================== -->
+
+	<dependencies>
+		<!-- ================================= -->
+		<!-- slf4j configuration to avoid Failed to load class
+		"org.slf4j.impl.StaticLoggerBinder error -->
+		<!-- ================================= -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>2.0.12</version>
+		</dependency>
+
+		<!-- ================================= -->
+		<!-- 🌐 Automation & Web Drivers -->
+		<!-- ================================= -->
+
+		<!-- ✅ Selenium Java -->
+		<!--
+		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+
+
+		<!-- ================================= -->
+		<!-- 📊 Excel & Data Handling -->
+		<!-- ================================= -->
+
+		<!-- ✅ Apache POI (Excel Core) -->
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+
+
+		<!-- ✅ Apache POI (OOXML for XLSX) -->
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+
+
+		<!-- ================================= -->
+		<!-- 🛠 Utility Libraries -->
+		<!-- ================================= -->
+
+		<!-- ✅ Apache Commons Lang -->
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons.lang3.version}</version>
+		</dependency>
+
+
+		<!-- ✅ Apache Commons IO -->
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons.io.version}</version>
+		</dependency>
+
+
+		<!-- ✅ Gson -->
+		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>${gson.version}</version>
+		</dependency>
+
+
+		<!-- ================================= -->
+		<!-- 🧪 Testing & Reporting -->
+		<!-- ================================= -->
+
+		<!-- ✅ TestNG -->
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testng.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<!-- ✅ Extent Reports -->
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>${extent.reports.version}</version>
+		</dependency>
+
+
+		<!-- ================================= -->
+		<!-- 📝 Logging -->
+		<!-- ================================= -->
+
+		<!-- ✅ Apache Log4j Core -->
+		<!--
+		https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+
+		<!-- ✅ Apache Log4j API -->
+		<!--
+		https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+
+		<!-- ================================= -->
+		<!-- 📧 Email Support -->
+		<!-- ================================= -->
+
+		<!-- ✅ Jakarta Mail -->
+		<!-- https://mvnrepository.com/artifact/com.sun.mail/jakarta.mail -->
+
+		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>jakarta.mail</artifactId>
+			<version>${jakarta.mail.version}</version>
+		</dependency>
+
+
+	</dependencies>
+
+
+	<!-- ===================== -->
+	<!-- Build Plugins -->
+	<!-- ===================== -->
+
+	<build>
+
+		<pluginManagement>
+
+			<plugins>
+
+				<!-- clean lifecycle -->
+				<!--
+				https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+
+				<!-- ✅ Clean Plugin -->
+				<plugin>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>3.4.0</version>
+				</plugin>
+
+
+				<!-- default lifecycle, jar packaging -->
+				<!--
+				https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+
+				<!-- ✅ Resources Plugin -->
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>3.3.1</version>
+				</plugin>
+
+
+				<!-- ✅ Compiler Plugin -->
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.13.0</version>
+				</plugin>
+
+
+				<!-- ✅ Surefire Plugin (For TestNG execution) -->
+				<plugin>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.3.0</version>
+				</plugin>
+
+
+				<!-- ✅ JAR Plugin -->
+				<plugin>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.4.2</version>
+				</plugin>
+
+
+				<!-- ✅ Install Plugin -->
+				<plugin>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>3.1.2</version>
+				</plugin>
+
+
+				<!-- ✅ Deploy Plugin -->
+				<plugin>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>3.1.2</version>
+				</plugin>
+
+
+				<!-- site lifecycle -->
+				<!--
+				https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+
+				<!-- ✅ Site Plugin -->
+				<plugin>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>3.12.1</version>
+				</plugin>
+
+
+				<!-- ✅ Project Info Reports -->
+				<plugin>
+					<artifactId>maven-project-info-reports-plugin</artifactId>
+					<version>3.6.1</version>
+				</plugin>
+
+
+			</plugins>
+
+		</pluginManagement>
+
+	</build>
+
+</project>
