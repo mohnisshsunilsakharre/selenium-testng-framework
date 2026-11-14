@@ -85,7 +85,7 @@ Failure screenshots are saved under the configured report output location.
 
 ## 👨‍💻 Author
 
-**Mohnissh**
+**Mohnissh(Naacchht)**
 
 ---
 *This repository is an educational automation framework project. Update this README as additional tests and framework capabilities are implemented.*
